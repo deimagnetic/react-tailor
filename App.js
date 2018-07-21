@@ -54,7 +54,7 @@ const DrawerNavigation = createDrawerNavigator({
   },
 }, {
     contentComponent: DrawerContainer,
-    initialRouteName:'Checkout',
+    initialRouteName:'HomePage',
     drawerOpenRoute: 'DrawerOpen',
     drawerClassRoute: 'DrawerClose',
     draweToggleRoute: 'DrawerToggle'

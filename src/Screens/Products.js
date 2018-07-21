@@ -54,7 +54,7 @@ class Products extends React.Component {
             <View style={{ alignItems: 'center', justifyContent: 'center' }}>
             
             <Text style={{fontSize:18,fontWeight:'bold'}}>{product.name}</Text>
-            <Text> ₹ {product.price}</Text>
+            <Text style={{textAlign:'center'}}> ₹ {product.price}</Text>
           </View>
           <View style={{ display: 'flex', flexDirection: 'row', padding: 10, marginLeft: 20, marginBottom: 20 }}>
                     <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center',marginTop:10 }}>

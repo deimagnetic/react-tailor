@@ -157,7 +157,7 @@ class Checkout extends Component {
                 <View style={styles.container2}>
                 <TouchableOpacity
     style={{backgroundColor: "#000", height: 50,width:'100%'}}
-    onPress={() => this.postOrder(item)}>
+    onPress={() => [this.postOrder(item),navigate("Success")]}>
     <Text style={{color: "#fff",textAlign:'center',paddingTop:15}}> Place Order </Text>
     </TouchableOpacity> 
     </View>
@@ -183,6 +183,9 @@ class Checkout extends Component {
   }
       postOrder(item) {
         
+
+          this.props.CartAction.removeFromCart(item);
+          
           url = "https://dreamdesign.rkhomeappliances.co.in/wp-json/wc/v2/orders?&consumer_key=ck_fab24b83126c02ccdf3ffa5e39b45e92ea984d74&consumer_secret=cs_5cf3ca533a10e52f781250b06e821d909819fbb1";
           
           let data = {
@@ -197,7 +200,7 @@ class Checkout extends Component {
                   state: this.state.state,
                   postcode: this.state.postcode,
                   country: this.state.country,
-                  "email": "john.doe@example.com",
+                  email: this.state.email,
                   phone: this.state.phone
                   },
                   shipping: {
@@ -237,8 +240,7 @@ class Checkout extends Component {
           });
           };
 
-          this.props.CartAction.removeFromCart(item);
-          navigate("Checkout");
+          
       }
   
       const styles = StyleSheet.create({

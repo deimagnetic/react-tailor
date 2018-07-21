@@ -75,9 +75,9 @@ class Category extends Component {
           <Text style={styles.text}>{item.name}</Text>
 		  <View style={styles.borderNow}></View>
 		  <View style={styles.cartPrice}>
-			  <Text style={styles.addCart}>Add To Cart</Text>
+			  <Text style={styles.addCart}>₹{item.price}</Text>
 			  <Text style={styles.price}>
-			  ₹{item.price}
+			  
 			  </Text> 
 			  </View>
         </View>
@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
 		width:165
 	  },
 	  addCart:{
-		  paddingLeft:10,
+		  textAlign:'center',
 		  fontSize:14,
 		  fontSize:18,
 		  paddingBottom:20

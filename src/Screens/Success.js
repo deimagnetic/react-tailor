@@ -29,16 +29,7 @@ class Success extends Component {
     render() {
     return (
       <View style={styles.wrapper}>
-        <View style={styles.container}>
-            <View style={[styles.box, styles.box1]}></View>
-            <View style={[styles.box, styles.box2]}></View>
-            <View style={[styles.box, styles.box3]}></View>
-        </View>
-        <View style={styles.container2}>
-            <View style={[styles.box, styles.box1]}></View>
-            <View style={[styles.box, styles.box2]}></View>
-            <View style={[styles.box, styles.box3]}></View>
-        </View>
+       <Text style={{textAlign:'center'}}>Product ordered Successfully</Text>
       </View>
     );
   }
