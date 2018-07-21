@@ -76,6 +76,7 @@ class Cart extends Component {
       return (
         <View style={styles.container}>
 		  {Items}
+
 		  <TouchableOpacity style={styles.button} underlayColor="#1f1f1f" onPress={() => navigate("Checkout")} >
                         <Text style={{ color: '#fff' }}> CHECKOUT </Text>
                     </TouchableOpacity>
